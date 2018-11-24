@@ -7,14 +7,14 @@
         ul
           li: router-link(to="/chooseashoe") ChooseAShoe
           li: router-link(to="/") SearchAShoe
-          li: router-link(to="/") About
+          li: router-link(to="/about") About
           li: router-link(to="/") Login
 </template>
 
 <script>
-  export default {
-    name: 'NavBar',
-  }
+export default {
+  name: 'NavBar',
+}
 </script>
 <style>
 

@@ -13,9 +13,9 @@
 </template>
 
 <script>
-    export default {
-        name: "ShoeView"
-    }
+export default {
+  name: 'ShoeView',
+}
 </script>
 
 <style scoped>

@@ -4,6 +4,8 @@ import Home from './views/Home.vue';
 import NavBar from './components/Navbar.vue';
 import ChooseAshoe from './views/ChooseAshoe.vue';
 import Result from './views/Result.vue';
+import SmartSticker from './views/SmartSticker.vue';
+import About from "./views/About";
 
 Vue.use(Router);
 
@@ -35,14 +37,14 @@ export default new Router({
       component: Result,
     },
     {
+      path: '/technology',
+      name: 'SmartSticker',
+      component: SmartSticker,
+    },
+    {
       path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component() {
-        return import(/* webpackChunkName: "about" */ './views/About.vue');
-      },
+      name: 'About',
+      component: About,
     },
   ],
 });
