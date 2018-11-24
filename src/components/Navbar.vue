@@ -2,7 +2,7 @@
   .navbar.navbar-default.navbar-fixed-top
     .container-fluid
       .navbar-header
-        img.b-navbar-brand(src="../assets/logo.gif")
+        img.navbar-brand(src="../assets/logo.gif")
       .b-navbar-nav
         ul
           li: router-link(to="/chooseashoe") ChooseAShoe
@@ -23,9 +23,7 @@ export default {
     src: url(../assets/fonts/D-DIN.otf) format("opentype");
   }
 
-  .b-navbar-brand {
-    height: 70px;
-  }
+
   ul {
     list-style-type: none;
     float: right;
@@ -46,6 +44,11 @@ export default {
 
   ul li :hover {
     text-decoration: none;
+  }
+  .navbar-brand {
+    height: 70px;
+    position: initial;
+    margin-top: 0px;
   }
 
 </style>

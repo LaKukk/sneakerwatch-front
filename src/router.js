@@ -5,7 +5,7 @@ import NavBar from './components/Navbar.vue';
 import ChooseAshoe from './views/ChooseAshoe.vue';
 import Result from './views/Result.vue';
 import SmartSticker from './views/SmartSticker.vue';
-import About from "./views/About";
+import About from './views/About';
 
 Vue.use(Router);
 
