@@ -13,6 +13,9 @@ export default new Vuex.Store({
     question5_max: 0,
     question4: null,
     question6: [],
+    budget: null,
+    brands: null,
+    inspirations: null,
   },
   mutations: {
     SET_QUESTION: (state, payload) => {
@@ -52,8 +55,42 @@ export default new Vuex.Store({
       state.question4 = null;
       state.question6 = [];
     },
+    getBudget(state, budget) {
+      state.budget = budget
+    },
+    getBrands(state, brands) {
+      state.brands = brands
+    },
+    getInspirations(state, inspirations) {
+      state.inspirations = inspirations
+    }
   },
   actions: {
+    // budget controller
+    getBudget: function(context) {
+      this.$http.get(this.$config.API_BASE + 'budget').then((res) => {
+        context.commit('budget', res.result)
+      })
+    },
+    // sneaker
+    chooseSneakers: function(context, params) {
+      this.$http.post(this.$config.API_BASE + 'sneakers/search', params).then((res) => {
+        // TODO: Lauri pane siia URL)
+        this.$router.push('...')
+      })
+    },
+    // filter
+    getBrands: function (context) {
+      this.$http.get(this.$config.API_BASE + 'filter/brands').then((res) => {
+        context.commit('brands', res.result)
+      })
+    },
+    getInspirations: function (context) {
+      this.$http.get(this.$config.API_BASE + 'filter/inspirations').then((res) => {
+        context.commit('inspirations', res.result)
+      })
+    },
+    // sneaker search query
   },
   getters: {
     QUESTION: state => state.question,
@@ -64,5 +101,8 @@ export default new Vuex.Store({
     QUESTION5MAX: state => state.question5_max,
     QUESTION4: state => state.question4,
     QUESTION6: state => state.question6,
+    BUDGET: state => state.budget,
+    BRANDS: state => state.brands,
+    INSPIRATIONS: state => state.inspirations,
   },
 });
