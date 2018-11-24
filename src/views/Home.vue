@@ -1,5 +1,8 @@
 <template lang="pug">
-  nav-bar
+  .main-container
+    nav-bar
+    .content
+      home-page
 </template>
 
 <script>
@@ -8,6 +11,6 @@
 
 export default {
   name: 'home',
-  components: {NavBar}
+  components: {NavBar, HomePage}
 };
 </script>

@@ -1,13 +1,14 @@
 <template lang="pug">
-  .navbar
-    .asd
-      img.logo(src="../assets/logo.gif")
-    .psd
-      ul
-        li ChooseAShoe
-        li SearchAShoe
-        li About
-        li Login
+  .navbar.navbar-default.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        img.b-navbar-brand(src="../assets/logo.gif")
+      .b-navbar-nav
+        ul
+          li: router-link(to="/") ChooseAShoe
+          li: router-link(to="/") SearchAShoe
+          li: router-link(to="/") About
+          li: router-link(to="/") Login
 </template>
 
 <script>
@@ -22,12 +23,9 @@
     src: url(../assets/fonts/D-DIN.otf) format("opentype");
   }
 
-  .logo {
+  .b-navbar-brand {
     height: 70px;
-    float: left;
-    margin-left: 1%;
   }
-
   ul {
     list-style-type: none;
     float: right;
@@ -35,12 +33,19 @@
     font-size: 36px;
     margin-top: 15px;
     font-family: myFirstFont;
-    color: black;
   }
 
   ul li {
     display: inline;
     margin: 0px 10px;
+    color: black;
+  }
+  ul li :visited {
+    color: #080810;
+  }
+
+  ul li :hover {
+    text-decoration: none;
   }
 
 </style>
