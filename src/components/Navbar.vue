@@ -5,7 +5,7 @@
         img.b-navbar-brand(src="../assets/logo.gif")
       .b-navbar-nav
         ul
-          li: router-link(to="/") ChooseAShoe
+          li: router-link(to="/chooseashoe") ChooseAShoe
           li: router-link(to="/") SearchAShoe
           li: router-link(to="/") About
           li: router-link(to="/") Login

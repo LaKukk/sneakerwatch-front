@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import NavBar from './components/Navbar.vue';
+import ChooseAshoe from './views/ChooseAshoe.vue';
 
 Vue.use(Router);
 
@@ -20,6 +21,12 @@ export default new Router({
           component: NavBar,
         },
       ],
+
+    },
+    {
+      path: '/chooseashoe',
+      name: 'Chooseashoe',
+      component: ChooseAshoe,
     },
     {
       path: '/about',
