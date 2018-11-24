@@ -2,7 +2,8 @@
   .navbar.navbar-default.navbar-fixed-top
     .container-fluid
       .navbar-header
-        img.navbar-brand(src="../assets/logo.gif")
+        router-link(to="/")
+          img.navbar-brand(src="../assets/logo.gif")
       .b-navbar-nav
         ul
           li: router-link(to="/chooseashoe") ChooseAShoe
