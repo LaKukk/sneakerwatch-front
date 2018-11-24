@@ -44,41 +44,25 @@ export default new Vuex.Store({
       }
     },
     RESET_QUESTIONS: (state) => {
-      state.question1 = null
-      state.question2 = null
-      state.question3 = null
-      state.question5_max = 0
-      state.question5_min = 0
-      state.question4 = null
-      state.question6 = []
-    }
+      state.question1 = null;
+      state.question2 = null;
+      state.question3 = null;
+      state.question5_max = 0;
+      state.question5_min = 0;
+      state.question4 = null;
+      state.question6 = [];
+    },
   },
   actions: {
   },
   getters: {
-    QUESTION: state => {
-      return state.question
-    },
-    QUESTION1: state => {
-      return state.question1
-    },
-    QUESTION2: state => {
-      return state.question2
-    },
-    QUESTION3: state => {
-      return state.question3
-    },
-    QUESTION5MIN: state => {
-      return state.question5_min
-    },
-    QUESTION5MAX: state => {
-      return state.question5_max
-    },
-    QUESTION4: state => {
-      return state.question4
-    },
-    QUESTION6: state => {
-      return state.question6
-    },
-  }
+    QUESTION: state => state.question,
+    QUESTION1: state => state.question1,
+    QUESTION2: state => state.question2,
+    QUESTION3: state => state.question3,
+    QUESTION5MIN: state => state.question5_min,
+    QUESTION5MAX: state => state.question5_max,
+    QUESTION4: state => state.question4,
+    QUESTION6: state => state.question6,
+  },
 });
