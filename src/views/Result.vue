@@ -1,10 +1,16 @@
-<template>
-
+<template lang="pug">
+  nav-bar
 </template>
 
 <script>
-    export default {
-        name: "Result"
+  import NavBar from '../components/Navbar'
+
+  export default {
+        name: "Result",
+    components: {NavBar},
+    mounted: function () {
+      this.$store.commit("SET_QUESTION", 1)
+    }
     }
 </script>
 

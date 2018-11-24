@@ -10,7 +10,7 @@
       question6(v-if="question === 6")
       .col-md-2.float-right( v-on:click="nextQuestion()")
         img(src="../assets/arrow.svg").arrow
-        svg(height="105" width="100" v-on:click="nextQuestion()")
+        svg(height="105" width="100")
           circle(cx="50" cy="55" r="50" fill="#e0e0e0")
           circle( cx="50" cy="50" r="50" fill="white")
 
@@ -40,6 +40,7 @@
           nextQuestion: function () {
             if (this.question === 6) {
               this.$router.push({name: 'Result'})
+
             }
             this.$store.commit("SET_QUESTION", this.question + 1)
             this.question = this.$store.getters.QUESTION
