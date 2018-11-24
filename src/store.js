@@ -8,14 +8,11 @@ export default new Vuex.Store({
     question: 1,
   },
   mutations: {
-    SET_QUESTION: (state, data) => {
-      this.state.question = data
+    SET_QUESTION: (state, payload) => {
+      state.question = payload
     }
   },
   actions: {
-    ADDONE: (context) => {
-      this.state.question += 1
-    }
   },
   getters: {
     QUESTION: state => {

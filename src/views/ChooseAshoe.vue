@@ -8,7 +8,7 @@
       question4(v-if="question === 4")
       question5(v-if="question === 5")
       question6(v-if="question === 6")
-      .col-md-2.float-right
+      .col-md-2.float-right( v-on:click="nextQuestion()")
         img(src="../assets/arrow.svg").arrow
         svg(height="105" width="100" v-on:click="nextQuestion()")
           circle(cx="50" cy="55" r="50" fill="#e0e0e0")
@@ -38,8 +38,11 @@
       },
       methods: {
           nextQuestion: function () {
-            console.log("1")
-            this.$store.dispatch('ADDONE')
+            if (this.question === 6) {
+              this.$router.push({name: 'Result'})
+            }
+            this.$store.commit("SET_QUESTION", this.question + 1)
+            this.question = this.$store.getters.QUESTION
           }
       }
 

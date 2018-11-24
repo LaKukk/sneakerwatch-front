@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import NavBar from './components/Navbar.vue';
 import ChooseAshoe from './views/ChooseAshoe.vue';
+import Result from './views/Result.vue';
 
 Vue.use(Router);
 
@@ -27,6 +28,11 @@ export default new Router({
       path: '/chooseashoe',
       name: 'Chooseashoe',
       component: ChooseAshoe,
+    },
+    {
+      path: '/chooseashoe/result',
+      name: 'Result',
+      component: Result,
     },
     {
       path: '/about',
