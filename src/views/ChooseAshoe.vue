@@ -42,7 +42,21 @@
               this.$router.push({name: 'Result'})
 
             }
-            this.$store.commit("SET_QUESTION", this.question + 1)
+            if (this.question === 1 && this.$store.getters.QUESTION1 !== null) {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else if (this.question === 2 && this.$store.getters.QUESTION2 !== null) {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else if (this.question === 3 && this.$store.getters.QUESTION3 !== null)  {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else if (this.question === 4 && this.$store.getters.QUESTION4 !== null) {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else if (this.question === 5 && this.$store.getters.QUESTION5MAX !== 0) {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else if (this.question === 6 && !this.$store.getters.QUESTION6.empty()) {
+              this.$store.commit("SET_QUESTION", this.question + 1)
+            } else {
+              console.log("error")
+            }
             this.question = this.$store.getters.QUESTION
           }
       }

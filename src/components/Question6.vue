@@ -1,51 +1,63 @@
 <template lang="pug">
   .container
-    .col-md-4.float-left(v-if="!answer.includes('Adidas')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Adidas')")
+    .col-md-4.float-left(v-if="!answer.includes('Adidas')"  v-on:click="changeAnswer('Adidas')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/adidas.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-left(v-if="answer.includes('Adidas')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Adidas')")
+    .col-md-4.float-left(v-if="answer.includes('Adidas')"  v-on:click="changeAnswer('Adidas')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/adidas.png").sign
+      svg(height="310" width="300")
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-4.float-right(v-if="!answer.includes('Nike')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Nike')")
+    .col-md-4.float-right(v-if="!answer.includes('Nike')" v-on:click="changeAnswer('Nike')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/nike.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-right(v-if="answer.includes('Nike')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Nike')")
+    .col-md-4.float-right(v-if="answer.includes('Nike')" v-on:click="changeAnswer('Nike')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/nike.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-4.float-right(v-if="!answer.includes('Puma')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Puma')")
+    .col-md-4.float-right(v-if="!answer.includes('Puma')" v-on:click="changeAnswer('Puma')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/puma.png").sign
+      svg(height="310" width="300")
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-right(v-if="answer.includes('Puma')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Puma')")
+    .col-md-4.float-right(v-if="answer.includes('Puma')" v-on:click="changeAnswer('Puma')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/puma.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-4.float-left(v-if="!answer.includes('Reebok')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Reebok')")
+    .col-md-4.float-left(v-if="!answer.includes('Reebok')" v-on:click="changeAnswer('Reebok')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/reebok.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-left(v-if="answer.includes('Reebok')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Reebok')")
+    .col-md-4.float-left(v-if="answer.includes('Reebok')" v-on:click="changeAnswer('Reebok')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/reebok.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-4.float-right(v-if="!answer.includes('Asics')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Asics')")
+    .col-md-4.float-right(v-if="!answer.includes('Asics')" v-on:click="changeAnswer('Asics')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/asics.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-right(v-if="answer.includes('Asics')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Asics')")
+    .col-md-4.float-right(v-if="answer.includes('Asics')" v-on:click="changeAnswer('Asics')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/asics.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-4.float-right(v-if="!answer.includes('Ecco')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Ecco')")
+    .col-md-4.float-right(v-if="!answer.includes('Ecco')" v-on:click="changeAnswer('Ecco')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/ecco.png").sign
+      svg(height="310" width="300")
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle( cx="150" cy="150" r="150" fill="white")
-    .col-md-4.float-right(v-if="answer.includes('Ecco')")
-      svg(height="310" width="300" v-on:click="changeAnswer('Ecco')")
+    .col-md-4.float-right(v-if="answer.includes('Ecco')" v-on:click="changeAnswer('Ecco')")
+      img(src="https://cdn.runrepeat.com/img/brand-color/ecco.png").sign
+      svg(height="310" width="300" )
         circle(cx="150" cy="160" r="150" fill="#e0e0e0")
         circle(cx="150" cy="150" r="145" fill="white" stroke="blue" stroke-width="3px")
 </template>
@@ -67,7 +79,17 @@
 </script>
 
 <style scoped>
+  .container {
+    padding-top: 4%;
+    margin-bottom: 8%;
+  }
+
   .col-md-4 {
     margin-top: 20px;
+  }
+
+  .sign {
+    margin-top: 15%;
+    margin-left: 50px;
   }
 </style>
