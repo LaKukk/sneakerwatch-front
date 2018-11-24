@@ -19,14 +19,14 @@
 </template>
 
 <script>
-    export default {
-        name: "Question1",
-      data() {
-          return {
-            selected: 'no'
-          }
-      }
+export default {
+  name: 'Question1',
+  data() {
+    return {
+      selected: 'no',
     }
+  },
+}
 </script>
 
 <style scoped>

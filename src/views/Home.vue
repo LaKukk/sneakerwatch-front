@@ -6,11 +6,11 @@
 </template>
 
 <script>
-  import NavBar from '../components/Navbar'
-  import HomePage from '../components/HomePage'
+import NavBar from '../components/Navbar';
+import HomePage from '../components/HomePage';
 
 export default {
   name: 'home',
-  components: {NavBar, HomePage}
+  components: { NavBar, HomePage },
 };
 </script>
