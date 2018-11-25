@@ -12,16 +12,11 @@
               br
               input#two(type='radio', value='CASUAL', v-model='type')
               label(for='two') Casual
-            .form(v-if="type === 'SPORT'")
+            .form(v-if="type === 'SPORT' && inspirations !== []")
               p Sport
-              input#one(type='radio', value='Running', v-model='sport')
-              label(for='one') Running
-              br
-              input#two(type='radio', value='BasketBall', v-model='sport')
-              label(for='two') Basketball
-              br
-              input#two(type='radio', value='Tennis', v-model='sport')
-              label(for='two') Tennis
+              .sport(v-for="inspiration in inspirations")
+                input(type="radio" :value="inspiration" v-model="sport")
+                label {{inspiration}}
             .form
               p Top
               input#one(type='radio', value='HIGH', v-model='top')
@@ -62,6 +57,7 @@
       return {
         shoes: [],
         brands: [],
+        inspirations: [],
         sport: null,
         type: null,
         checkedBrands: [],
@@ -77,13 +73,16 @@
       this.$http.get('http://localhost:8080/api/public/filter/brands').then((res) => {
         this.brands = res.body.filter(item => item !== null)
       })
+      this.$http.get('http://localhost:8080/api/public/filter/inspirations').then((res) => {
+        this.inspirations = res.body.filter(item => item !== null)
+      })
       this.$http.get('http://localhost:8080/api/public/sneakers').then((res) => {
         this.shoes = res.body.content
       })
     },
     methods: {
       updateShoes: function () {
-        this.$http.post('http://localhost:8080/api/public/sneakers/select', {
+        this.$http.post('http://localhost:8080/api/public/sneakers/search', {
           "brands": this.checkedBrands,
           "budget": this.budget,
           "inspired": this.type,
@@ -109,7 +108,7 @@
   .rect {
     background: white;
     width: 100%;
-    height: 1500px;
+    height: 1900px;
     border-radius: 25px;
     box-shadow: 0px 10px #e0e0e0;
     margin-bottom: 50px;
