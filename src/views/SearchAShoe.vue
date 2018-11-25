@@ -109,10 +109,10 @@
   .rect {
     background: white;
     width: 100%;
-    height: 1500px;
+    height: 1520px;
     border-radius: 25px;
     box-shadow: 0px 10px #e0e0e0;
-    margin-bottom: 50px;
+    padding-bottom: 75px;
   }
   .smallshoe img {
     max-height: 100px;

@@ -34,6 +34,10 @@
         .col-md-6
           p.bigText(v-if="isActive") Adidas Ultra Tech
           p.bigText(v-else) Reebok Aztrek
+    footer
+      | This was one helluva ride. Thanks for everything, all of this brand new tech is available to you starting next week. Starting price only 299.99€
+      .footer-copyright.text-center.py-3 © {{ new Date().getFullYear() }} N6ukogu of ITÜK
+
 </template>
 
 <script>
