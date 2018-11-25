@@ -4,6 +4,7 @@
   .container2
     .row
       .col-ms-3
+        img(src="../assets/research.svg").icon
         svg(height="210" width="200")
           circle(cx="100" cy="110" r="100" fill="#e0e0e0")
           circle( cx="100" cy="100" r="100" fill="white")
@@ -17,11 +18,13 @@
         p.bigText2 The Fitbit you never have to charge
         label.info Sneakerwatch joins forces with SmartSticker, Sneakerwatch's hobby project turned game-breaking product. All you have to do is stick your SmartSticker onto the bottom of your shoes and SneakerWatch's super smart sensors wil know what your body needs
       .col-ms-3
+        img(src="../assets/chip.svg").icon
         svg(height="210" width="200")
           circle(cx="100" cy="110" r="100" fill="#e0e0e0")
           circle(cx="100" cy="100" r="100" fill="white")
     .row
       .col-ms-3
+        img(src="../assets/filter.svg").icon
         svg(height="210" width="200")
           circle(cx="100" cy="110" r="100" fill="#e0e0e0")
           circle( cx="100" cy="100" r="100" fill="white")
@@ -106,5 +109,11 @@ export default {
   }
   .down3 {
     margin-top: 45px;
+  }
+  .icon  {
+    height: 125px;
+    position: absolute;
+    margin-top: 40px;
+    margin-left: 40px;
   }
 </style>
