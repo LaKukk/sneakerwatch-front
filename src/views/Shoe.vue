@@ -10,11 +10,14 @@
           br
           p.info {{shoe.description}}
           br
+          b-dropdown#ddown1.m-md-2.float-left(text='Available in shops near you')
+            b-dropdown-item(v-for="shop in shops" :href="shop.urlToGoogleMaps") {{shop.address}} {{shop.distance}} km
         .col-md-6.float-right
           img(:src="shoe.imageUrl")
           svg(height="710" width="700")
             circle(cx="350" cy="360" r="350" fill="#e0e0e0")
             circle(cx="350" cy="350" r="350" fill="white")
+
 
 </template>
 
@@ -27,12 +30,16 @@
       data() {
           return {
             shoe: null,
+            shops: [],
           }
       },
       mounted: function () {
         this.$http.get('http://localhost:8080/api/public/sneakers/getById/' + this.$route.params.pointer).then((res) => {
           this.shoe = res.body
-      })
+        })
+        this.$http.get('http://localhost:8080/api/public/shops/0').then((res) => {
+          this.shops = res.body
+        })
       },
     }
 </script>
