@@ -14,8 +14,7 @@
 
 <script>
   export default {
-    name: "Question5"
-    ,
+    name: "Question5",
     computed: {
       min: {
         get() {

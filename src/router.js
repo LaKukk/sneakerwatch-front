@@ -3,9 +3,11 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import NavBar from './components/Navbar.vue';
 import ChooseAshoe from './views/ChooseAshoe.vue';
+import SearchAShoe from './views/SearchAShoe.vue';
 import Result from './views/Result.vue';
 import SmartSticker from './views/SmartSticker.vue';
 import About from './views/About';
+import Shoe from './views/Shoe';
 
 Vue.use(Router);
 
@@ -30,6 +32,16 @@ export default new Router({
       path: '/chooseashoe',
       name: 'Chooseashoe',
       component: ChooseAshoe,
+    },
+    {
+      path: '/searchashoe',
+      name: 'SearchAshoe',
+      component: SearchAShoe,
+    },
+    {
+      path: '/sneaker/:pointer',
+      name: 'Sneaker',
+      component: Shoe,
     },
     {
       path: '/chooseashoe/result',

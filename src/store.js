@@ -16,6 +16,10 @@ export default new Vuex.Store({
     budget: null,
     brands: null,
     inspirations: null,
+    shoe1: null,
+    shoe2: null,
+    shoe3: null,
+    shoe4: null
   },
   mutations: {
     SET_QUESTION: (state, payload) => {
@@ -33,11 +37,23 @@ export default new Vuex.Store({
     SET_QUESTION5MIN: (state, payload_min) => {
       state.question5_min = payload_min
     },
-    SET_QUESTION5MAX: (state, payload_min) => {
-      state.question5_max = payload_min
+    SET_QUESTION5MAX: (state, payload_max) => {
+      state.question5_max = payload_max
     },
     SET_QUESTION4: (state, payload) => {
       state.question4 = payload
+    },
+    SET_SHOE1: (state, payload) => {
+      state.shoe1 = payload
+    },
+    SET_SHOE2: (state, payload) => {
+      state.shoe2 = payload
+    },
+    SET_SHOE3: (state, payload) => {
+      state.shoe3 = payload
+    },
+    SET_SHOE4: (state, payload) => {
+      state.shoe4 = payload
     },
     SET_QUESTION6: (state, payload) => {
       if (state.question6.includes(payload)) {
@@ -54,6 +70,12 @@ export default new Vuex.Store({
       state.question5_min = 0;
       state.question4 = null;
       state.question6 = [];
+    },
+    CLEARSHOE: (state) => {
+      state.shoe1 = undefined;
+      state.shoe2 = undefined;
+      state.shoe3 = undefined;
+      state.shoe4 = undefined;
     },
     getBudget(state, budget) {
       state.budget = budget
@@ -73,11 +95,8 @@ export default new Vuex.Store({
       })
     },
     // sneaker
-    chooseSneakers: function(context, params) {
-      this.$http.post(this.$config.API_BASE + 'sneakers/search', params).then((res) => {
-        // TODO: Lauri pane siia URL)
-        this.$router.push('...')
-      })
+    chooseSneakers: function(context) {
+
     },
     // filter
     getBrands: function (context) {
@@ -104,5 +123,9 @@ export default new Vuex.Store({
     BUDGET: state => state.budget,
     BRANDS: state => state.brands,
     INSPIRATIONS: state => state.inspirations,
+    SHOE1: state => state.shoe1,
+    SHOE2: state => state.shoe2,
+    SHOE3: state => state.shoe3,
+    SHOE4: state => state.shoe4,
   },
 });

@@ -2,28 +2,33 @@
 .main-container
   nav-bar
   .container
-    .col-md-4.pull-left
-      svg(height="210" width="200")
-        circle(cx="100" cy="110" r="100" fill="#e0e0e0")
-        circle( cx="100" cy="100" r="100" fill="white")
-    .col-md-8.pull-right
-      p ta ei kuuletu
-    .col-md-4.pull-right
-      svg(height="210" width="200")
-        circle(cx="100" cy="110" r="100" fill="#e0e0e0")
-        circle(cx="100" cy="100" r="100" fill="white" stroke="blue" stroke-width="3px")
-    .col-md-8.pull-left
-      p ta ei kuuletu
-    .col-md-4.pull-left
-      svg(height="210" width="200")
-        circle(cx="100" cy="110" r="100" fill="#e0e0e0")
-        circle( cx="100" cy="100" r="100" fill="white")
-    .col-md-8.pull-right
-      p ta ei kuuletu
+    .row
+      .col-md-4
+        svg(height="210" width="200")
+          circle(cx="100" cy="110" r="100" fill="#e0e0e0")
+          circle( cx="100" cy="100" r="100" fill="white")
+      .col-md-8
+        p ta ei kuuletu
+    .row
+      .col-md-8
+        p ta ei kuuletu
+      .col-md-4
+        svg(height="210" width="200")
+          circle(cx="100" cy="110" r="100" fill="#e0e0e0")
+          circle(cx="100" cy="100" r="100" fill="white")
+    .row
+      .col-md-4
+        svg(height="210" width="200")
+          circle(cx="100" cy="110" r="100" fill="#e0e0e0")
+          circle( cx="100" cy="100" r="100" fill="white")
+      .col-md-8
+        p ta ei kuuletu
 </template>
 <script>
+  import NavBar from '../components/Navbar'
 export default {
   name: 'About',
+  components: {NavBar}
 }
 </script>
 <style>
