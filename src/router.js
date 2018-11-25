@@ -5,7 +5,7 @@ import NavBar from './components/Navbar.vue';
 import ChooseAshoe from './views/ChooseAshoe.vue';
 import SearchAShoe from './views/SearchAShoe.vue';
 import Result from './views/Result.vue';
-import SmartSticker from './views/SmartSticker.vue';
+import SmartSticker from './components/SmartSticker.vue';
 import About from './views/About';
 import Shoe from './views/Shoe';
 import Profile from './views/Profile';

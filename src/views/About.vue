@@ -39,7 +39,7 @@ export default {
   components: {NavBar}
 }
 </script>
-<style>
+<style scoped>
   .col-md-8 {
     padding: 0;
   }

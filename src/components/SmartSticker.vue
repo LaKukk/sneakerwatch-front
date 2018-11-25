@@ -1,17 +1,12 @@
 <template lang="pug">
-  .main-container
-    nav-bar
     .container
-      .row.menu-container
-        .col-md-6.float-left
-        .col-md-6.float-right
-          p.bigText Recommended sneakers
+      .row.titleContainer
+        p.title Smart sticker  movement summary past 60 days
+        p.title (from 25th September)
+        br
       .row
-        .col-md-6.float-left.titleContainer
-          p.title Smart sticker  movement summary
-          p.title past 60 days (from 25th September)
-          br
-          p.info Heel pressure data
+        .col-md-6.float-left
+          p.info Heel pressure data:
             b  +4.7% increase from the previous period
           p.info Average temperature:
             b  34.5°C (+2.1%)
@@ -27,11 +22,12 @@
             | Softer sole is recommended.
             | Higher top is recommended.
         .col-md-6.float-right
-          img(v-if="isActive" src="https://cdn.runrepeat.com/i/adidas/29622/adidas-ultra-tech-scarpe-da-fitness-uomo-bianco-balcri-lilrea-negbas-000-46-eu-bianco-balcri-lilrea-negbas-000-9cd0-600.jpg")
-          img(v-else src="https://cdn.runrepeat.com/i/reebok/30072/reebok-aztrek-women-s-white-navy-acid-pink-nylon-running-shoes-4-5-b-m-us-white-navy-acid-pink-22ea-600.jpg")
-          svg(height="710" width="700")
-            circle(cx="350" cy="360" r="350" fill="#e0e0e0")
-            circle(cx="350" cy="350" r="350" fill="white")
+          p.bigText Recommended
+          img(v-if="isActive" src="https://cdn.runrepeat.com/i/adidas/29622/adidas-ultra-tech-scarpe-da-fitness-uomo-bianco-balcri-lilrea-negbas-000-46-eu-bianco-balcri-lilrea-negbas-000-9cd0-600.jpg").sneaker
+          img(v-else src="https://cdn.runrepeat.com/i/reebok/30072/reebok-aztrek-women-s-white-navy-acid-pink-nylon-running-shoes-4-5-b-m-us-white-navy-acid-pink-22ea-600.jpg").sneaker
+          svg(height="420" width="400")
+            circle(cx="200" cy="210" r="200" fill="#e0e0e0")
+            circle(cx="200" cy="200" r="200" fill="white")
       .row
         .col-md-6
           p.smallText(v-on:click="change") Choose next
@@ -41,7 +37,7 @@
 </template>
 
 <script>
-import NavBar from '../components/Navbar.vue';
+import NavBar from './Navbar.vue';
 
 export default {
   name: 'SmartSticker',
@@ -66,7 +62,7 @@ export default {
   }
 
   .container {
-    margin-top: 1%;
+    margin-top: 0 !important;
     margin-right: 10%;
     margin-left: 10%;
     max-width: 80%;
@@ -75,8 +71,6 @@ export default {
 
   img {
     position: absolute;
-    margin-top: 25%;
-    margin-left: 7%;
   }
 
   p {
@@ -87,33 +81,33 @@ export default {
 
   .smallText {
     cursor: pointer;
-    font-size: 30px;
-    padding-right: 300px;
-    margin-bottom: -25px;
-    margin-top: 25px;
+    font-size: 18px;
+    text-align: justify;
     text-transform: uppercase;
   }
 
   .bigText {
     font-weight: bold;
+    font-size: 24px;
+    text-align: center;
     text-transform: uppercase;
   }
 
   .title {
-    font-size: 44px;
+    font-size: 30px;
     text-align: left;
-    margin-bottom: -25px;
+    margin-bottom: 0.5%;
   }
 
   .titleContainer {
-    /*padding-top: 10%;*/
+    padding-bottom: 2%;
     color: black;
     text-transform: uppercase;
   }
 
   .info {
     text-align: justify;
-    font-size: 18px;
+    font-size: 16px;
     text-transform: initial;
   }
 
@@ -123,6 +117,19 @@ export default {
 
   .menu-container {
     padding-top: 2%;
+  }
+
+  .icon  {
+    height: 60px;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .sneaker  {
+    height: 150px;
+    position: absolute;
+    margin-top: 140px;
+    margin-left: 40px;
   }
 
 </style>

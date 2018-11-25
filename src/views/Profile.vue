@@ -24,7 +24,7 @@
   import ProfileView from '../components/ProfileView'
   import Connections from '../components/Connections'
   import Favorites from '../components/Favorites'
-  import SmartSticker from './SmartSticker'
+  import SmartSticker from '../components/SmartSticker'
 
 
   export default {
