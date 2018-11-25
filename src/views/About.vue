@@ -30,7 +30,7 @@
           circle( cx="100" cy="100" r="100" fill="white")
       .col-md-6.move.down3
         p.bigText2 Skyscanner for sneakers
-        label.info Just tell us what you'd like to wear and Sneakerwatch knows the shoes for you. This needs more txt to look semi-normal... Kaspaaaar.
+        label.info Just tell us what you'd like to wear and Sneakerwatch knows the shoes for you. Currently I'm adding more and more lines to this text in order it to look more professional. Little to people know, professional is not my middle name.
 </template>
 <script>
   import NavBar from '../components/Navbar'

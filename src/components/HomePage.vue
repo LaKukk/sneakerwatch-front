@@ -4,7 +4,7 @@
       p.title Welcome to
       p.title SneakerWatch
       br
-      p.info Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+      p.info Connecting people with sneakers they never thought they needed. Until now
     .col-md-6.float-right
       img(src="https://cdn.runrepeat.com/i/adidas/25593/adidas-men-s-lacombe-spzl-fitness-shoes-white-blabas-blatiz-versen-7-5-uk-men-s-white-blabas-blatiz-versen-35e3-600.jpg")
       svg(height="710" width="700")
@@ -74,5 +74,6 @@
     text-align: justify;
     font-size: 18px;
     text-transform: initial;
+    margin-right:45px;
   }
 </style>
