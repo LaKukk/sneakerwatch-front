@@ -8,6 +8,7 @@ import Result from './views/Result.vue';
 import SmartSticker from './views/SmartSticker.vue';
 import About from './views/About';
 import Shoe from './views/Shoe';
+import Profile from './views/Profile';
 
 Vue.use(Router);
 
@@ -32,6 +33,11 @@ export default new Router({
       path: '/chooseashoe',
       name: 'Chooseashoe',
       component: ChooseAshoe,
+    },
+    {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
     },
     {
       path: '/searchashoe',

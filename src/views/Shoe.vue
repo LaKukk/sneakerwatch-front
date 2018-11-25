@@ -2,23 +2,28 @@
   .main-container
     nav-bar
     .container
-      .col-md-6.float-left.titleContainer
-        p.title {{shoe.name.split(' ')[0]}}
-        p.title {{shoe.name.split(/\s(.+)/)[1]}}
-        br
-        p.info {{shoe.description}}
-      .col-md-6.float-right
-        img(:src="shoe.imageUrl")
-        svg(height="710" width="700")
-          circle(cx="350" cy="360" r="350" fill="#e0e0e0")
-          circle(cx="350" cy="350" r="350" fill="white")
+      .row
+        .col-md-6.float-left.titleContainer
+          p.title {{shoe.name.split(' ')[0]}}
+          p.title {{shoe.name.split(/\s(.+)/)[1]}}
+          p.titleButSmaller {{shoe.top}} | {{shoe.inspired}} | {{shoe.collection}} | {{shoe.price}} €
+          br
+          p.info {{shoe.description}}
+          br
+        .col-md-6.float-right
+          img(:src="shoe.imageUrl")
+          svg(height="710" width="700")
+            circle(cx="350" cy="360" r="350" fill="#e0e0e0")
+            circle(cx="350" cy="350" r="350" fill="white")
+
 </template>
 
 <script>
   import NavBar from '../components/Navbar'
+  import {BadgerAccordion, BadgerAccordionItem} from 'vue-badger-accordion'
     export default {
         name: "Shoe",
-      components: {NavBar},
+      components: {NavBar,BadgerAccordion, BadgerAccordionItem},
       data() {
           return {
             shoe: null,
@@ -67,6 +72,11 @@
   }
   .title {
     font-size: 65px;
+    text-align: left;
+
+  }
+  .titleButSmaller{
+    font-size: 42px;
     text-align: left;
     margin-bottom: -25px;
   }

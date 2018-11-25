@@ -9,7 +9,7 @@
           li: router-link(to="/chooseashoe") ChooseAShoe
           li: router-link(to="/searchashoe") SearchAShoe
           li: router-link(to="/about") About
-          li: router-link(to="/") Login
+          li: router-link(to="/profile") Profile
 </template>
 
 <script>
