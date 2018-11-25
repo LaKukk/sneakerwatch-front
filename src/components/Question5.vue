@@ -1,15 +1,17 @@
 <template lang="pug">
   .container
-    .col-md-6.float-right
-      .input-group.input-group-lg
-        .input-group-prepend
-          span.input-group-text#inputGroup-sizing-lg Max
-        input.form-control(type="number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" v-model="max")
-    .col-md-6.float-left
-      .input-group.input-group-lg
-        .input-group-prepend
-          span.input-group-text#inputGroup-sizing-lg Min
-        input.form-control(type="number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" v-model="min")
+    .row
+      .col-md-6.float-left
+        .input-group.input-group-lg
+          .input-group-prepend
+            span.input-group-text#inputGroup-sizing-lg Min
+          input.form-control(type="number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" v-model="min")
+      .col-md-6.float-right
+        .input-group.input-group-lg
+          .input-group-prepend
+            span.input-group-text#inputGroup-sizing-lg Max
+          input.form-control(type="number" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" v-model="max")
+    button.btn.btn-primary(v-on:click="calculate") Calculate my budget
 </template>
 
 <script>
@@ -31,6 +33,14 @@
         set(value) {
           this.$store.commit('SET_QUESTION5MAX', value)
         }
+      }
+    },
+    methods: {
+      calculate: function () {
+        this.$http.get('http://localhost:8080/api/public/budget').then((res) => {
+          this.$store.commit('SET_QUESTION5MAX', res.body.end)
+          this.$store.commit('SET_QUESTION5MIN', res.body.start)
+        })
       }
     }
   }

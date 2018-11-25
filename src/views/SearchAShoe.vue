@@ -67,8 +67,8 @@
         checkedBrands: [],
         top: null,
         budget: {
-          start: null,
-          end: null
+          start: 0,
+          end: 999999999
         }
 
       }
@@ -83,7 +83,7 @@
     },
     methods: {
       updateShoes: function () {
-        this.$http.post('http://localhost:8080/api/public/sneakers/select', {
+        this.$http.get('http://localhost:8080/api/public/sneakers/search', {
           "brands": this.checkedBrands,
           "budget": this.budget,
           "inspired": this.type,
@@ -109,7 +109,7 @@
   .rect {
     background: white;
     width: 100%;
-    height: 1300px;
+    height: 1500px;
     border-radius: 25px;
     box-shadow: 0px 10px #e0e0e0;
     margin-bottom: 50px;
