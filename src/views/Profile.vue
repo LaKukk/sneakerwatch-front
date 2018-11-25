@@ -32,7 +32,7 @@
     components: {NavBar, ProfileView, Connections, Favorites, SmartSticker},
     data() {
       return {
-        show: "profile"
+        show: "smartsticker"
       }
     },
     mounted: function () {
