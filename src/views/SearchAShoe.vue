@@ -12,7 +12,7 @@
               br
               input#two(type='radio', value='CASUAL', v-model='type')
               label(for='two') Casual
-            .form(v-if="type === 'Sport'")
+            .form(v-if="type === 'SPORT'")
               p Sport
               input#one(type='radio', value='Running', v-model='sport')
               label(for='one') Running
