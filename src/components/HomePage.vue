@@ -4,7 +4,8 @@
       p.title Welcome to
       p.title SneakerWatch
       br
-      p.info Connecting people with sneakers they never thought they needed. Until now
+      p.info Connecting people with sneakers they never thought they needed. Until now.
+      router-link.smallText(to="/profile") What do your shoes say
     .col-md-6.float-right
       img(src="https://cdn.runrepeat.com/i/adidas/25593/adidas-men-s-lacombe-spzl-fitness-shoes-white-blabas-blatiz-versen-7-5-uk-men-s-white-blabas-blatiz-versen-35e3-600.jpg")
       svg(height="710" width="700")
