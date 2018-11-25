@@ -83,7 +83,7 @@
     },
     methods: {
       updateShoes: function () {
-        this.$http.post('http://localhost:8080/api/public/sneakers/choose', {
+        this.$http.post('http://localhost:8080/api/public/sneakers/select', {
           "brands": this.checkedBrands,
           "budget": this.budget,
           "inspired": this.type,
