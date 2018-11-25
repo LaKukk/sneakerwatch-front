@@ -7,10 +7,10 @@
           .rect
             .form
               p Type
-              input#one(type='radio', value='Sport', v-model='type')
+              input#one(type='radio', value='SPORT', v-model='type')
               label(for='one') Sport
               br
-              input#two(type='radio', value='Casual', v-model='type')
+              input#two(type='radio', value='CASUAL', v-model='type')
               label(for='two') Casual
             .form(v-if="type === 'Sport'")
               p Sport
@@ -24,13 +24,13 @@
               label(for='two') Tennis
             .form
               p Top
-              input#one(type='radio', value='High', v-model='top')
+              input#one(type='radio', value='HIGH', v-model='top')
               label(for='one') High
               br
-              input#two(type='radio', value='Mid', v-model='top')
+              input#two(type='radio', value='MID', v-model='top')
               label(for='two') Mid
               br
-              input#two(type='radio', value='Low', v-model='top')
+              input#two(type='radio', value='LOW', v-model='top')
               label(for='two') Low
             .form(v-if="brands !== []")
               p Brands
@@ -67,8 +67,8 @@
         checkedBrands: [],
         top: null,
         budget: {
-          start: null,
-          end: null
+          start: 0,
+          end: 999999999
         }
 
       }
@@ -83,14 +83,14 @@
     },
     methods: {
       updateShoes: function () {
-        this.$http.post('http://localhost:8080/api/public/sneakers/select', {
+        this.$http.post('http://localhost:8080/api/public/sneakers/search', {
           "brands": this.checkedBrands,
           "budget": this.budget,
           "inspired": this.type,
           "sport": this.sport,
           "top": this.top
         }).then((res) => {
-          this.shoes = res.body.content
+          this.shoes = res.body
         })
       }
     }
