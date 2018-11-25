@@ -4,25 +4,35 @@
     .container
       .row
         .col-3
-          .rect2
-            .form2
-              p Profile
-              p Connections
-              p Favorites
-              p My SmartSticker
+          .list-group
+            a.list-group-item.list-group-item-action(v-on:click="show = 'profile'") Profile
+            a.list-group-item.list-group-item-action(v-on:click="show = 'connections'") Connections
+            a.list-group-item.list-group-item-action(v-on:click="show = 'favorites'") Favorites
+            a.list-group-item.list-group-item-action(v-on:click="show = 'smartsticker'") My SmartSticker
+
         .col-9
+              profile-view(v-if="show === 'profile'")
+              connections(v-if="show === 'connections'")
+              favorites(v-if="show === 'favorites'")
+              smart-sticker(v-if="show === 'smartsticker'")
 
 
 </template>
 
 <script>
   import NavBar from '../components/Navbar'
+  import ProfileView from '../components/ProfileView'
+  import Connections from '../components/Connections'
+  import Favorites from '../components/Favorites'
+  import SmartSticker from './SmartSticker'
+
 
   export default {
     name: "Profile",
-    components: {NavBar},
+    components: {NavBar, ProfileView, Connections, Favorites, SmartSticker},
     data() {
       return {
+        show: "profile"
       }
     },
     mounted: function () {

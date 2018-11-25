@@ -1,5 +1,45 @@
-<template>
-    
+<template lang="pug">
+  .card
+    .card-body
+      .row
+        .col-md-12
+          h4 Your Profile
+          hr
+      .row
+        .col-md-12
+          form
+            .form-group.row
+              label.col-4.col-form-label(for='username') User Name*
+              .col-8
+                input#username.form-control.here(name='username', placeholder='Username', required='required', type='text')
+            .form-group.row
+              label.col-4.col-form-label(for='name') First Name
+              .col-8
+                input#name.form-control.here(name='name', placeholder='First Name', type='text')
+            .form-group.row
+              label.col-4.col-form-label(for='lastname') Last Name
+              .col-8
+                input#lastname.form-control.here(name='lastname', placeholder='Last Name', type='text')
+            .form-group.row
+              label.col-4.col-form-label(for='text') Nickname*
+              .col-8
+                input#text.form-control.here(name='text', placeholder='Nickname', required='required', type='text')
+            .form-group.row
+              label.col-4.col-form-label(for='email') Email*
+              .col-8
+                input#email.form-control.here(name='email', placeholder='Email', required='required', type='text')
+            .form-group.row
+              label.col-4.col-form-label(for='publicinfo') Public Info
+              .col-8
+                textarea#publicinfo.form-control(name='publicinfo', cols='40', rows='4')
+            .form-group.row
+              label.col-4.col-form-label(for='newpass') New Password
+              .col-8
+                input#newpass.form-control.here(name='newpass', placeholder='New Password', type='text')
+            .form-group.row
+              .offset-4.col-8
+                button.btn.btn-primary(name='submit', type='submit') Update My Profile
+
 </template>
 
 <script>
@@ -9,5 +49,7 @@
 </script>
 
 <style scoped>
-
+  .input-group-prepend {
+    width: 100%;
+  }
 </style>
